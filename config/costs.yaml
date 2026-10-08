@@ -1,0 +1,58 @@
+version: 1
+
+# These are configurable simulation assumptions.
+#
+# Statutory charges and broker/exchange charges can change.
+# Keep them separate from the model so backtests can be rerun
+# with updated assumptions without changing Python code.
+
+india:
+  equity_delivery:
+    brokerage_bps: 0.0
+
+    # STT is charged on both purchase and sale of equity
+    # delivery transactions at 0.10% from 1 Apr 2026.
+    stt_buy_bps: 10.0
+    stt_sell_bps: 10.0
+
+    exchange_transaction_charge_bps: 0.0
+    sebi_turnover_fee_bps: 0.01
+
+    gst_rate: 0.18
+
+    stamp_duty_buy_bps: 1.5
+
+    slippage_bps: 5.0
+
+  equity_intraday:
+    brokerage_bps: 0.0
+
+    stt_buy_bps: 0.0
+    stt_sell_bps: 2.5
+
+    exchange_transaction_charge_bps: 0.0
+    sebi_turnover_fee_bps: 0.01
+
+    gst_rate: 0.18
+
+    stamp_duty_buy_bps: 0.3
+
+    slippage_bps: 5.0
+
+
+us:
+  equity:
+    brokerage_bps: 0.0
+    regulatory_fees_bps: 0.0
+    exchange_transaction_charge_bps: 0.0
+    slippage_bps: 3.0
+
+
+backtest:
+  # Never allow a frictionless return to be presented as the
+  # primary strategy result.
+  require_transaction_costs: true
+
+  default_market: india
+
+  default_asset_class: equity_delivery

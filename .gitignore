@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+
+# Pytest
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local database
+data/*.duckdb
+data/*.duckdb.wal
+
+# Local/generated data
+data/corpus/*
+data/ticks/*
+data/options/*
+data/parquet/*
+
+# Model artifacts
+models/*
+
+# Keep directory placeholders
+!data/corpus/.gitkeep
+!data/ticks/.gitkeep
+!data/options/.gitkeep
+!data/parquet/.gitkeep
+!models/.gitkeep
+
+# Logs
+*.log

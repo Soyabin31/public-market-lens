@@ -1,0 +1,71 @@
+markets:
+  india:
+    name: India
+    timezone: Asia/Kolkata
+
+    benchmark_symbols:
+      - "^NSEI"       # NIFTY 50
+      - "^NSEBANK"    # NIFTY BANK
+      - "^CNXIT"      # NIFTY IT
+      - "^INDIAVIX"   # India VIX
+
+  us:
+    name: United States
+    timezone: America/New_York
+
+    benchmark_symbols:
+      - "^GSPC"       # S&P 500
+      - "^IXIC"       # NASDAQ Composite
+      - "^DJI"        # Dow Jones Industrial Average
+      - "^VIX"        # CBOE Volatility Index
+
+
+stocks:
+  india:
+    # Initial universe used during development.
+    #
+    # This is intentionally configurable. Later we can expand this
+    # to NIFTY 50 / NIFTY 100 / NIFTY 500 or another universe without
+    # changing the ingestion, feature, model, or database architecture.
+    #
+    # Important:
+    # These are current/initial symbols, not historical constituent
+    # membership. Historical constituent data should eventually be
+    # used when calculating long-term breadth to reduce survivorship bias.
+    universe: nifty_50
+
+    symbols:
+      - "RELIANCE.NS"
+      - "HDFCBANK.NS"
+      - "ICICIBANK.NS"
+      - "INFY.NS"
+      - "TCS.NS"
+      - "SBIN.NS"
+      - "ITC.NS"
+      - "LT.NS"
+      - "BHARTIARTL.NS"
+      - "SUNPHARMA.NS"
+
+  us:
+    # Initial representative universe used during development.
+    #
+    # This can later be expanded to S&P 500, NASDAQ 100, Dow 30,
+    # sector-specific universes, or a custom universe.
+    universe: sp500
+
+    symbols:
+      - "AAPL"
+      - "MSFT"
+      - "AMZN"
+      - "NVDA"
+      - "GOOGL"
+      - "META"
+      - "JPM"
+      - "XOM"
+      - "WMT"
+      - "JNJ"
+
+
+history:
+  # Default amount of historical daily data requested by the ingestion layer.
+  years: 5

@@ -1,0 +1,436 @@
+version: 1
+refresh:
+  default_interval_minutes: 15
+  catch_up_hours: 72
+
+defaults:
+  enabled: true
+  source_type: publisher
+  timeout_seconds: 20
+  max_articles_per_feed: 100
+
+sources:
+
+  # ============================================================
+  # INDIA — TIER 1
+  # ============================================================
+
+  - id: economic_times_markets
+    name: Economic Times Markets
+    publisher: Economic Times
+    source_type: publisher
+    tier: 1
+    market: india
+    enabled: true
+    feed_url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"
+    categories:
+      - markets
+      - stocks
+      - commodities
+      - forex
+      - bonds
+
+  - id: business_standard_markets
+    name: Business Standard Markets
+    publisher: Business Standard
+    source_type: publisher
+    tier: 1
+    market: india
+    enabled: true
+    feed_url: "https://www.business-standard.com/rss/markets-106.rss"
+    categories:
+      - markets
+      - stocks
+      - commodities
+      - ipo
+
+  - id: business_standard_top
+    name: Business Standard Top Stories
+    publisher: Business Standard
+    source_type: publisher
+    tier: 1
+    market: india
+    enabled: true
+    feed_url: "https://www.business-standard.com/rss/home_page_top_stories.rss"
+    categories:
+      - business
+      - economy
+      - markets
+
+  - id: mint_markets
+    name: Mint Markets
+    publisher: Mint
+    source_type: publisher
+    tier: 1
+    market: india
+    enabled: true
+    feed_url: "https://www.livemint.com/rss/markets"
+    categories:
+      - markets
+      - stocks
+      - economy
+      - companies
+
+  - id: investing_india
+    name: Investing.com India
+    publisher: Investing.com
+    source_type: publisher
+    tier: 1
+    market: india
+    enabled: true
+    feed_url: "https://in.investing.com/rss/news_301.rss"
+    categories:
+      - markets
+      - stocks
+      - forex
+      - commodities
+      - macroeconomics
+
+  # ============================================================
+  # GLOBAL — TIER 1
+  #
+  # These entries are intentionally disabled until their current
+  # public RSS endpoint is independently validated.
+  # The ingestion engine already supports them.
+  # ============================================================
+
+  - id: reuters_markets
+    name: Reuters Markets
+    publisher: Reuters
+    source_type: publisher
+    tier: 1
+    market: global
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - economy
+      - commodities
+      - forex
+      - geopolitics
+
+  - id: bloomberg_markets
+    name: Bloomberg Markets
+    publisher: Bloomberg
+    source_type: publisher
+    tier: 1
+    market: global
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - bonds
+      - commodities
+      - forex
+      - macroeconomics
+
+  - id: cnbc_markets
+    name: CNBC Markets
+    publisher: CNBC
+    source_type: publisher
+    tier: 1
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - economy
+      - earnings
+      - commodities
+
+  - id: financial_times_markets
+    name: Financial Times Markets
+    publisher: Financial Times
+    source_type: publisher
+    tier: 1
+    market: global
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - economy
+      - companies
+      - currencies
+      - commodities
+
+  - id: wall_street_journal_markets
+    name: Wall Street Journal Markets
+    publisher: Wall Street Journal
+    source_type: publisher
+    tier: 1
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - bonds
+      - economy
+      - companies
+
+  # ============================================================
+  # INDIA — TIER 2
+  # ============================================================
+
+  - id: financial_express
+    name: Financial Express
+    publisher: Financial Express
+    source_type: publisher
+    tier: 2
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - economy
+      - companies
+      - banking
+      - commodities
+
+  - id: businessline
+    name: BusinessLine
+    publisher: BusinessLine
+    source_type: publisher
+    tier: 2
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - economy
+      - companies
+      - commodities
+
+  - id: moneycontrol
+    name: Moneycontrol
+    publisher: Moneycontrol
+    source_type: publisher
+    tier: 2
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - ipo
+      - economy
+      - companies
+
+  - id: cnbc_tv18
+    name: CNBC TV18
+    publisher: CNBC TV18
+    source_type: publisher
+    tier: 2
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - economy
+      - companies
+
+  # ============================================================
+  # GLOBAL — TIER 2
+  # ============================================================
+
+  - id: yahoo_finance
+    name: Yahoo Finance
+    publisher: Yahoo Finance
+    source_type: publisher
+    tier: 2
+    market: global
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - earnings
+      - commodities
+      - currencies
+
+  - id: marketwatch
+    name: MarketWatch
+    publisher: MarketWatch
+    source_type: publisher
+    tier: 2
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - economy
+      - personal_finance
+
+  - id: investopedia
+    name: Investopedia
+    publisher: Investopedia
+    source_type: publisher
+    tier: 2
+    market: global
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - economy
+      - investing
+      - macroeconomics
+
+  - id: investing_global
+    name: Investing.com Global
+    publisher: Investing.com
+    source_type: publisher
+    tier: 2
+    market: global
+    enabled: false
+    feed_url: ""
+    categories:
+      - markets
+      - stocks
+      - forex
+      - commodities
+      - bonds
+      - macroeconomics
+
+  # ============================================================
+  # OFFICIAL / PRIMARY SOURCES
+  # ============================================================
+
+  - id: rbi_press_releases
+    name: RBI Press Releases
+    publisher: Reserve Bank of India
+    source_type: official
+    tier: 1
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - monetary_policy
+      - banking
+      - regulation
+      - forex
+      - liquidity
+
+  - id: rbi_notifications
+    name: RBI Notifications
+    publisher: Reserve Bank of India
+    source_type: official
+    tier: 1
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - regulation
+      - banking
+      - monetary_policy
+
+  - id: sebi
+    name: SEBI
+    publisher: Securities and Exchange Board of India
+    source_type: official
+    tier: 1
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - regulation
+      - markets
+      - securities
+
+  - id: nse
+    name: NSE India
+    publisher: National Stock Exchange of India
+    source_type: official
+    tier: 1
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - exchange
+      - markets
+      - corporate_actions
+
+  - id: bse
+    name: BSE India
+    publisher: BSE
+    source_type: official
+    tier: 1
+    market: india
+    enabled: false
+    feed_url: ""
+    categories:
+      - exchange
+      - markets
+      - corporate_actions
+
+  - id: federal_reserve
+    name: Federal Reserve
+    publisher: Federal Reserve
+    source_type: official
+    tier: 1
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - monetary_policy
+      - interest_rates
+      - banking
+      - economy
+
+  - id: sec
+    name: U.S. Securities and Exchange Commission
+    publisher: SEC
+    source_type: official
+    tier: 1
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - regulation
+      - filings
+      - securities
+      - companies
+
+  - id: us_treasury
+    name: U.S. Treasury
+    publisher: U.S. Treasury
+    source_type: official
+    tier: 1
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - treasury
+      - bonds
+      - fiscal_policy
+      - economy
+
+  - id: bls
+    name: U.S. Bureau of Labor Statistics
+    publisher: Bureau of Labor Statistics
+    source_type: official
+    tier: 1
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - employment
+      - inflation
+      - economy
+
+  - id: bea
+    name: U.S. Bureau of Economic Analysis
+    publisher: Bureau of Economic Analysis
+    source_type: official
+    tier: 1
+    market: us
+    enabled: false
+    feed_url: ""
+    categories:
+      - gdp
+      - income
+      - economy

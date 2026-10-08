@@ -1,0 +1,63 @@
+prices:
+  primary:
+    provider: yfinance
+
+  india_equities:
+    provider: nse_bhavcopy
+    enabled: true
+
+
+news:
+  rss:
+    enabled: true
+
+    india:
+      - name: moneycontrol
+        url: "https://www.moneycontrol.com/rss/latestnews.xml"
+
+      - name: economic_times
+        url: "https://economictimes.indiatimes.com/rssfeedsdefault.cms"
+
+      - name: business_standard
+        url: "https://www.business-standard.com/rss/home_page_top_stories.rss"
+
+      - name: livemint
+        url: "https://www.livemint.com/rss/news"
+
+    us:
+      - name: cnbc
+        url: "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+
+      - name: marketwatch
+        url: "https://feeds.marketwatch.com/marketwatch/topstories/"
+
+
+  gdelt:
+    enabled: true
+
+    endpoint: "https://api.gdeltproject.org/api/v2/doc/doc"
+
+    query:
+      - "India markets"
+      - "NIFTY"
+      - "Bank Nifty"
+      - "US markets"
+      - "Federal Reserve"
+      - "tariff trade policy"
+      - "geopolitical conflict"
+
+
+llm:
+  provider: ollama
+
+  base_url: "http://localhost:11434"
+
+  model: "qwen2.5:7b-instruct"
+
+  temperature: 0.0
+
+  timeout_seconds: 120
+
+  # Number of times to retry structured-output parsing
+  # after an initial failure.
+  max_parse_retries: 1

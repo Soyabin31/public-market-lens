@@ -1,0 +1,159 @@
+market: india
+exchange: NSE
+segment: capital_market
+timezone: Asia/Kolkata
+calendar_year: 2026
+
+source:
+  authority: NSE India
+  source_type: official_exchange_calendar
+  verified_on: 2026-09-21
+
+# Saturdays and Sundays are non-trading days for the
+# NSE Capital Market segment unless an explicit special
+# session is declared.
+weekend_days:
+  - Saturday
+  - Sunday
+
+sessions:
+
+  "2026-01-15":
+    status: HOLIDAY
+    reason: Municipal Corporation Election in Maharashtra
+    source: NSE/CMTR/72260
+    source_date: "2026-01-12"
+
+  "2026-01-26":
+    status: HOLIDAY
+    reason: Republic Day
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-02-19":
+    status: HOLIDAY
+    reason: Chhatrapati Shivaji Maharaj Jayanti
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-03-03":
+    status: HOLIDAY
+    reason: Holi
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-03-19":
+    status: HOLIDAY
+    reason: Gudhi Padwa
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-03-26":
+    status: HOLIDAY
+    reason: Shri Ram Navami
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-03-31":
+    status: HOLIDAY
+    reason: Shri Mahavir Jayanti
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-04-01":
+    status: HOLIDAY
+    reason: Annual Bank Closing
+    source: NSE official 2026 holiday calendar
+    source_date: "2026-09-21"
+
+  "2026-04-03":
+    status: HOLIDAY
+    reason: Good Friday
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-04-14":
+    status: HOLIDAY
+    reason: Dr. Babasaheb Ambedkar Jayanti
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-05-01":
+    status: HOLIDAY
+    reason: Maharashtra Din / Maharashtra Day
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-05-28":
+    status: HOLIDAY
+    reason: Bakri Id (Id-Uz-Zuha)
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-06-26":
+    status: HOLIDAY
+    reason: Muharram
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-08-26":
+    status: HOLIDAY
+    reason: Id-E-Milad
+    source: NSE official 2026 holiday calendar
+    source_date: "2026-09-21"
+
+  "2026-09-14":
+    status: HOLIDAY
+    reason: Ganesh Chaturthi
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-10-02":
+    status: HOLIDAY
+    reason: Mahatma Gandhi Jayanti
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-10-20":
+    status: HOLIDAY
+    reason: Dussehra
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-11-08":
+    status: SPECIAL_SESSION
+    reason: Diwali Laxmi Pujan - Muhurat Trading
+    source: NSE official 2026 holiday calendar
+    source_date: "2026-09-21"
+
+  "2026-11-10":
+    status: HOLIDAY
+    reason: Diwali - Balipratipada
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-11-24":
+    status: HOLIDAY
+    reason: Prakash Gurpurb Sri Guru Nanak Dev
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+  "2026-12-25":
+    status: HOLIDAY
+    reason: Christmas
+    source: NSE/CMTR/71775
+    source_date: "2025-12-12"
+
+weekend_holidays:
+  "2026-02-15":
+    reason: Mahashivratri
+
+  "2026-03-21":
+    reason: Id-Ul-Fitr (Ramadan Eid)
+
+  "2026-08-15":
+    reason: Independence Day / Parsi New Year
+
+  "2026-11-08":
+    reason: Diwali Laxmi Pujan
+    special_session: true

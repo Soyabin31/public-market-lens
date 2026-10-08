@@ -1,0 +1,30 @@
+# Core data / database
+pandas>=2.2,<3
+numpy>=1.26,<3
+duckdb>=1.1,<2
+
+# Configuration / validation
+PyYAML>=6.0,<7
+pydantic>=2.8,<3
+python-dotenv>=1.0,<2
+
+# Market data
+yfinance>=0.2.40,<1
+
+# News ingestion
+feedparser>=6.0,<7
+requests>=2.32,<3
+
+# Technical analysis / ML
+scikit-learn>=1.5,<2
+lightgbm>=4.5,<5
+
+# Application
+streamlit>=1.40,<2
+
+# CLI / logging
+typer>=0.12,<1
+rich>=13.9,<14
+
+# Testing
+pytest>=8.3,<9

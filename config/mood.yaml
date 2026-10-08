@@ -1,0 +1,70 @@
+score:
+  minimum: 0
+  maximum: 100
+
+  weights:
+    trend: 0.30
+    momentum: 0.20
+    volatility: 0.25
+    breadth: 0.15
+    news: 0.10
+
+
+labels:
+  risk_off:
+    minimum: 0
+    maximum: 35
+    name: "Risk-Off"
+
+  neutral:
+    minimum: 35
+    maximum: 65
+    name: "Neutral"
+
+  risk_on:
+    minimum: 65
+    maximum: 100
+    name: "Risk-On"
+
+
+components:
+  trend:
+    description: "Measures the underlying direction of the market."
+    indicators:
+      - moving_average_alignment
+      - moving_average_slope
+
+  momentum:
+    description: "Measures the strength of recent price movement."
+    indicators:
+      - rsi
+      - rate_of_change
+
+  volatility:
+    description: "Measures whether market volatility is rising or falling."
+    indicators:
+      - realised_volatility
+      - india_vix
+
+  breadth:
+    description: "Measures how broadly market participants are participating."
+    indicators:
+      - percent_above_50dma
+      - breadth_change_5d
+
+  news:
+    description: "Measures the recent tone and importance of market-related news."
+    indicators:
+      - confidence_weighted_sentiment
+      - event_count
+      - geopolitical_events
+      - trade_policy_events
+      - monetary_policy_events
+
+
+windows:
+  short_days: 5
+  medium_days: 20
+  long_days: 50
+  volatility_percentile_days: 1260
+  news_trailing_sessions: 3
