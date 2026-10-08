@@ -38,5 +38,9 @@ models/*
 !data/parquet/.gitkeep
 !models/.gitkeep
 
+# Ignore clone subfolder
+public-market-lens/
+
+
 # Logs
 *.log
